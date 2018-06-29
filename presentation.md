@@ -94,12 +94,13 @@ WHERE a.ID_individu = b.ID_individu_detention AND b.ID_detention = c.ID_detentio
 
 ## Limites
 
-- Cartes seulement pertinente pour l’analyse d’adjacence
-- Obligation de multiplier les cartes pour la comparaison
+- **Cartes seulement pertinentes pour l’analyse d’adjacence**
+- **Obligation de multiplier les cartes pour la comparaison**
   - superposition des cartes qui pose des pbs de réalisation pratique (RVB, CMYN, sapin de Noël !)
   - ambiguïtés de la représentation en fonction de l’effectif
-- Effectifs réduits, disparité statistique
-- Catégories qui ne permettent pas de déterminer la gravité des délits 
+  - pour la comparaison, nécessité de calibrer les échelles
+- **Effectifs réduits, disparité statistique**
+- **Catégories qui ne permettent pas de déterminer la gravité des délits** 
 
 ## Analyse factorielle
 
