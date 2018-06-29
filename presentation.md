@@ -2,8 +2,9 @@
 
 **Déterminer si la sévérité des peines prononcées, pour des délits semblables, par les juges varient en fonction du quartier de résidence du détenu à Paris.** 
 
---> visualiser spatialement les différences en produisant plusieurs cartes puis en les réconciliants
---> recours nécessaire à une analyse multivariée, définition de catégorie
+- visualiser spatialement les différences en produisant plusieurs cartes puis en les réconciliants
+- définition de catégories
+- recours nécessaire à une analyse multivariée
 
 # Préparation des données
 
@@ -22,30 +23,30 @@ TBL_motifdetention
 
 ### Sélection des délits
 
-Sélection de délits à partir des regroupement de catégories déjà constituées, choix de quatre catégories en fonction de leur effectif et de la pertinence de la comparaison (axe évasion et surveillance non pertinent)
+Sélection de délits à partir des regroupement de catégories déjà constituées, choix de quatre catégories en fonction de leur effectif et de la pertinence de la comparaison 
+
+- (exclue évasion et surveillance comme non pertinent)
+- suppression des effectifs trop restreints
 
 10 résultats
-- contestataire
+- **contestataire**
 - contravention
 - crime de sang
-- escroquerie
+- **escroquerie**
 - évasion
 - moeurs
-- petits delits
+- **petits delits**
 - politique
-- social
+- **social**
 - surveillance
+
+Exemple de requêtes dans pour l’évaluation
 
 ```sql
 SELECT count(code1)
 FROM TBL_motifdetention
 WHERE code1 = 'moeurs'
 ```
-
-- Petits délits
-- escroquerie
-- social
-- contestataire
 
 ### Création de la table de données
 
