@@ -62,6 +62,8 @@ AND (c.code1 = 'Petits  délits' OR c.code1 = 'escroquerie' OR c.code1 = 'social
 - pb adresses (insuffisamment renseignées)
 - pb regroupement par arrondissement à partir des individus dans QGIS
 
+![carte1](carte1.png)
+
 = Regroupement par quartier
 
 ```sql
