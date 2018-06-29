@@ -50,6 +50,8 @@ WHERE code1 = 'moeurs'
 
 ### Création de la table de données
 
+Regroupements par individus
+
 ```sql
 SELECT a.ID_individu, a.ID_alpage_adresse, a.Num_quartier, a.Quartier_paris, b.Duree_detention, c.code1
 FROM TBL_individu AS a, TBL_detention AS b, TBL_motifdetention as c
@@ -69,13 +71,13 @@ WHERE a.ID_individu = b.ID_individu_detention AND b.ID_detention = c.ID_detentio
 
 ## Création des cartes
 
-- pb adresses
+- pb adresses (insuffisamment renseignées)
 
-- regroupement par arrondissement
+- pb regroupement par arrondissement à partir des individus dans QGIS
 
 - Classification de Jenks sur les durées
 
-- légendes pour les effectifs
+- Légendes pour les effectifs
 
   ### 
 
@@ -91,12 +93,9 @@ WHERE a.ID_individu = b.ID_individu_detention AND b.ID_detention = c.ID_detentio
 
 
 
-## Résultats
-
-Carte seulement pertinente pour l’analyse d’adjacence
-
 ## Limites
 
+- Cartes seulement pertinente pour l’analyse d’adjacence
 - Obligation de multiplier les cartes pour la comparaison
   - superposition des cartes qui pose des pbs de réalisation pratique (RVB, CMYN, sapin de Noël !)
   - ambiguïtés de la représentation en fonction de l’effectif
