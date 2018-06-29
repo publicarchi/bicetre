@@ -1,4 +1,4 @@
-## Question
+# Question
 
 **Déterminer si la sévérité des peines prononcées, pour des délits semblables, par les juges varient en fonction du quartier de résidence du détenu à Paris.** 
 
@@ -8,7 +8,7 @@
 
 # Préparation des données
 
-### Relations
+### Relations mobilisées
 
 TBL_individu
 - ID_individu
@@ -40,7 +40,7 @@ Sélection de délits à partir des regroupement de catégories déjà constitu�
 - **social**
 - surveillance
 
-Exemple de requêtes dans pour l’évaluation
+Exemple de requêtes dans pour l’évaluation des effectifs
 
 ```sql
 SELECT count(code1)
@@ -50,7 +50,7 @@ WHERE code1 = 'moeurs'
 
 ### Création de la table de données
 
-Regroupements par individus
+Regroupements par individus (inutile pour la production des cartes)
 
 ```sql
 SELECT a.ID_individu, a.ID_alpage_adresse, a.Num_quartier, a.Quartier_paris, b.Duree_detention, c.code1
@@ -59,7 +59,10 @@ WHERE a.ID_individu = b.ID_individu_detention AND b.ID_detention = c.ID_detentio
 AND (c.code1 = 'Petits  délits' OR c.code1 = 'escroquerie' OR c.code1 = 'social' OR  c.code1 = 'contestataire')
 ```
 
-Regroupement par quartier
+- pb adresses (insuffisamment renseignées)
+- pb regroupement par arrondissement à partir des individus dans QGIS
+
+= Regroupement par quartier
 
 ```sql
 SELECT a.ID_individu, a.ID_alpage_adresse, a.Num_quartier, a.Quartier_paris, b.Duree_detention, c.code1 
@@ -70,10 +73,6 @@ WHERE a.ID_individu = b.ID_individu_detention AND b.ID_detention = c.ID_detentio
 
 
 ## Création des cartes
-
-- pb adresses (insuffisamment renseignées)
-
-- pb regroupement par arrondissement à partir des individus dans QGIS
 
 - Classification de Jenks sur les durées
 
