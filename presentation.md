@@ -118,5 +118,13 @@ Est-ce que à crime égal on est jugé plus sévèrement en fonction de son quar
 
 
 
+Contacts
+
+bernard.ducharme@umontreal.ca
+
+alexandre.leclerc3@usherbrooke.ca
+
+emmanuel.chateau.dutier@umontreal.ca
+
 
 
